@@ -1,8 +1,7 @@
-*{
-    padding: 0;
+*{ padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+	}
 
 body{
     padding: 10px;
@@ -19,69 +18,69 @@ body{
     text-align: center;      
     margin-right: 0;
   }
-/*ORDENADOR (>=1200px)*/
-@media (min-width: 1200px) {
-  body { font-family: Arial, sans-serif; }
 
-  /* columnas laterales con float */
-  #nav1 {
-    float: left;
-    width: 15%;
-    margin-right: 30px;
-    min-height: 410px;
-  }
+/*vista dispoisitivo tablet*/
+@media (min-width: 700px) and (max-width: 1199px){
+    body{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
 
-  #nav2 {
-    float:left;
-        width : 83%;  
-  }
+    #nav2{
+        display: none;
+    }
+
+    #nav1{        
+        float:left;
+        width: 20%;
+        margin-right: 20px;
+        min-height: 300px;
+    }
+
+    #cuerpo{
+        float:left;
+        width: 77%;
+        min-height: 300px;
+    }
+
+    #banner{
+        clear:both;
+        width: 100%;
+    }    
+
+    
+}
+
+/*vista PC*/
+@media (min-width:1200px){
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }    
+
+    #nav1{
+        float:left;
+        width: 15%;
+        min-height: 420px;
+        margin-right: 35px;    
+    }  
+
+    #nav2{      
+        float:left;
+        width : 82%;        
+    }
+
+    #cuerpo{
+        float:left;
+        width:60%;
+        min-height: 300px;     
+    }
+
     #banner{
         float:right;
         width: 21%;
         min-height: 300px;       
     }
 
-  #cuerpo{
-        float:left;
-        width:60%;
-        min-height: 300px;     
-    }
-
     #footer{
         clear:both;
         width: 100%;
-    
-}
-
-/* TABLET (700px — 1199px) */
-@media (min-width: 700px) and (max-width: 1199px) {
-  body { font-family: "Calibri", sans-serif; }
-
-  /* nav1 más estrecho y flotando a la izquierda */
-  #nav1 {
-    float: left;
-    width: 180px;
-    margin-right: 12px;
-    min-height: 200px;
-  }
-
-  /* banner deja de flotar y se muestra en bloque (se colocará debajo del cuerpo) */
-  #banner {
-    float: none;
-    width: 100%;
-    margin: 12px 0 0 0;
-    min-height: 140px;
-  }
-
-  /* nav2 y cuerpo reservan el espacio de nav1 con margen izquierdo */
-  #nav2 {
-    margin: 0 0 12px 196px; /* 180 + ~16 gap */
-    min-height: 50px;
-  }
-
-  #cuerpo {
-    margin: 12px 0 0 196px;
-    min-height: 300px;
-  }
-}
-}
+    }
