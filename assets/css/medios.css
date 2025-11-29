@@ -1,0 +1,8 @@
+header,
+footer,
+nav,
+aside,
+.whatsapp-float {
+  display: none;
+  visibility: hidden;
+}
