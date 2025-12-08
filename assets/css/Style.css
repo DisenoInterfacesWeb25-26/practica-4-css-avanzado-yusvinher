@@ -1,4 +1,4 @@
-/*  Selector universal */
+
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +37,7 @@ header .logo {
   width: auto;
 }
 
+
 header h1 {
   font-size: 2.5em;
   letter-spacing: 2px;
@@ -50,19 +51,17 @@ header p {
 
 /*  Menú fijo (position: fixed)*/
 nav {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-
   background-color: #34495e;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 /*  Botonera de navegación */
 nav ul {
-  
   list-style: none;
   display: flex;
   justify-content: center;
@@ -401,6 +400,7 @@ footer a:active {
 .whatsapp-float:hover img {
   transform: scale(1.2);
 }
+
 /*MÓVIL: hasta 699px */
 @media screen and (max-width: 699px) {
   body {
@@ -444,7 +444,6 @@ footer a:active {
     flex: 1 1 40%;
     margin-bottom: 2em;
   }
-
   #contenido-principal {
     flex: 1 1 55%;
   }
@@ -456,6 +455,7 @@ footer a:active {
   }
 }
 
+/* ORDENADOR: desde 1200px */
 /* ORDENADOR: desde 1200px */
 @media screen and (min-width: 1200px) {
   body {
@@ -470,7 +470,6 @@ footer a:active {
   aside {
     flex: 1;
   }
-
   #contenido-principal {
     flex: 3;
   }
@@ -481,3 +480,75 @@ footer a:active {
   }
 }
 
+.imgCentrada {
+  width: 400px;
+  height: auto;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.6s ease-out; /* transición más suave */
+}
+
+.imgCentrada img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.imgCentrada{
+    transition: width 2s ease-out;
+}
+
+.imgCentrada:hover{
+    width: 80%;
+}
+
+/* estilos diferentes*/
+a[href$=".pdf"]::after{
+    content: url("https://www.shareicon.net/data/16x16/2016/08/13/808584_document_512x512.png");
+}
+
+img[alt=""] {
+  border: 3px solid rgb(255, 47, 0);
+  
+  /* Estilos flex*/
+}
+.contenedor-flex {
+  display: flex;
+  flex-wrap: wrap;             
+  justify-content: space-around; 
+  align-items: center;        
+  gap: 1.5em;
+  padding: 2em;
+  background-color: #f0f0f0;
+  border-radius: 0.8em;
+  margin-top: 2em;              
+}
+
+.contenedor-flex .item {
+  display: block;
+  flex: 0 1 200px;            
+  background-color: #25b812;
+  color: white;
+  text-align: center;
+  padding: 1.2em 2em;
+  border-radius: 0.5em;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;     
+}
+
+.contenedor-flex .item:hover {
+  transform: translateY(-5px);
+  background-color: #1f9c0f;
+}
+
+.contenedor-flex .item:active {
+  transform: translateY(2px);
+  background-color: #148d37; 
+}
+img[alt="Logo"]:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.1) translateY(-10px); /* Sube un poco y escala */
+}
