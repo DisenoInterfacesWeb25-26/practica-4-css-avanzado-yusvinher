@@ -488,7 +488,7 @@ footer a:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.6s ease-out; /* transición más suave */
+  transition: transform 0.6s ease-out; 
 }
 
 .imgCentrada img {
